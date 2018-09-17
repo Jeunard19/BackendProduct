@@ -1,32 +1,26 @@
-package com.winstgenerator.backend.model;
+package com.winstgenerator.backend.DTO;
 
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
-@Entity
-public class Product {
+public class ProductDto {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column
 	private String productName; 
 	
 	private String productCategory; 
 	
 	private Double pricePaid; 
 	
-	//@OneToMany
 	//public List<Double> pricesOnline; 
 	
 	private Integer winstMargin;
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
 
 	public String getProductCategory() {
 		return productCategory;
@@ -44,14 +38,6 @@ public class Product {
 		this.pricePaid = pricePaid;
 	}
 
-	public Integer getWinstMargin() {
-		return winstMargin;
-	}
-
-	public void setWinstMargin(Integer winstMargin) {
-		this.winstMargin = winstMargin;
-	}
-
 	//public List<Double> getPricesOnline() {
 	//	return pricesOnline;
 	//}
@@ -60,6 +46,14 @@ public class Product {
 	//	this.pricesOnline = pricesOnline;
 	//}
 
+	public Integer getWinstMargin() {
+		return winstMargin;
+	}
+
+	public void setWinstMargin(Integer winstMargin) {
+		this.winstMargin = winstMargin;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -67,15 +61,6 @@ public class Product {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	public String getProductName() {
-		return productName;
-	}
-
-	public void setProductName(String productName) {
-		this.productName = productName;
-	} 
-	
 	
 	
 	
