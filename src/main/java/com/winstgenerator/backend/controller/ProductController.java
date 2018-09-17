@@ -28,8 +28,10 @@ public class ProductController {
 		if (optional.isPresent()) {
 			ProductDto productDto = new ProductDto(); 
 			productDto.setId(optional.get().getId());
+			productDto.setPricePaid(optional.get().getPricePaid()); 
 			productDto.setProductName(optional.get().getProductName());
 			productDto.setProductCategory(optional.get().getProductCategory());
+			productDto.setWinstMargin(optional.get().getWinstMargin());
 			
 			
 			return productDto;
