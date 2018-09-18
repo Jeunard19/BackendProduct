@@ -26,7 +26,7 @@ public class Product {
 	//@OneToMany
 	//public List<Double> pricesOnline; 
 	
-	private Integer winstMargin;
+	private Double winstMargin;
 
 	public String getProductCategory() {
 		return productCategory;
@@ -44,11 +44,11 @@ public class Product {
 		this.pricePaid = pricePaid;
 	}
 
-	public Integer getWinstMargin() {
+	public Double getWinstMargin() {
 		return winstMargin;
 	}
 
-	public void setWinstMargin(Integer winstMargin) {
+	public void setWinstMargin(Double winstMargin) {
 		this.winstMargin = winstMargin;
 	}
 

@@ -30,8 +30,9 @@ public class ProductController {
 			productDto.setId(optional.get().getId());
 			productDto.setPricePaid(optional.get().getPricePaid()); 
 			productDto.setProductName(optional.get().getProductName());
-			productDto.setProductCategory(optional.get().getProductCategory());
 			productDto.setWinstMargin(optional.get().getWinstMargin());
+			productDto.setProductCategory(optional.get().getProductCategory());
+			
 			
 			
 			return productDto;
