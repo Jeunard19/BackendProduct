@@ -2,11 +2,15 @@ package com.winstgenerator.backend.model;
 
 
 
+//import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+//import javax.persistence.OneToMany;
+
 
 
 @Entity
@@ -21,9 +25,14 @@ public class Product {
 	
 	private String productCategory; 
 	
+	private Long userId; 
+	
 	private Double pricePaid; 
 	
-	//@OneToMany
+	//user ID 
+	
+	
+	//@OneToMany //meerdere producten met 1 prijs. Onetomany: 1 product met meerdere priijzen. Manytoone kan nooit list. 
 	//public List<Double> pricesOnline; 
 	
 	private Double winstMargin;
@@ -74,7 +83,17 @@ public class Product {
 
 	public void setProductName(String productName) {
 		this.productName = productName;
-	} 
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	
 	
 	
 	

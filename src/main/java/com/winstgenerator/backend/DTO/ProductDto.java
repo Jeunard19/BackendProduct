@@ -6,6 +6,8 @@ public class ProductDto {
 	
 	private String productName; 
 	
+	private Long userId; 
+	
 	private String productCategory; 
 	
 	private Double pricePaid; 
@@ -60,6 +62,14 @@ public class ProductDto {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 	
 	

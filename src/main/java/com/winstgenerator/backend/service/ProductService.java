@@ -44,5 +44,13 @@ public class ProductService implements IProductService {
 
 			return this.iProductDao.save(product);
 		}
+
+	@Override
+	public Optional<Product> findbyuserId(Long userId) {
+		if (userId < 0)
+			return Optional.empty();
+		
+		return this.iProductDao.findbyuserId(userId);
+	}
 	
 }

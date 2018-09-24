@@ -44,6 +44,27 @@ public class ProductController {
 	public Product create(@RequestBody Product product) {
 		return this.iProductService.create(product);
 	}
+	
+	@GetMapping("/api/product/userId/{userId}")
+	public ProductDto findbyuserId(@PathVariable Long userId) {
+		
+		Optional<Product> optional = this.iProductService.findbyuserId(userId);
+
+		if (optional.isPresent()) {
+			ProductDto productDto = new ProductDto(); 
+			productDto.setId(optional.get().getId());
+			productDto.setPricePaid(optional.get().getPricePaid()); 
+			productDto.setProductName(optional.get().getProductName());
+			productDto.setWinstMargin(optional.get().getWinstMargin());
+			productDto.setProductCategory(optional.get().getProductCategory());
+			productDto.setUserId(optional.get().getUserId());
+			
+			
+			
+			return productDto;
+		}
+		return null;
+	}
 		
 	
 }
